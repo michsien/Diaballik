@@ -1,0 +1,59 @@
+unit Historia;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Grids;
+
+type
+  TEkranHistorii = class(TForm)
+    NapisHistoriaZawiera: TLabel;
+    NapisRuchow: TLabel;
+    WpiszLiczbaRuchow: TEdit;
+    NapisPrezentowanaSytuacja: TLabel;
+    WpiszNumerRuchu: TEdit;
+    NapisRuchach: TLabel;
+    GuzikSkocz1Tyl: TButton;
+    GuzikSkocz1Przod: TButton;
+    GuzikSkoczTyl: TButton;
+    GuzikSkoczPrzod: TButton;
+    WpiszSkokTyl: TEdit;
+    WpiszSkokPrzod: TEdit;
+    GuzikPlay: TButton;
+    GuzikStop: TButton;
+    PlanszaHistoria: TStringGrid;
+    NapisNazwaGracza1: TLabel;
+    NapisNazwaGracza2: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  EkranHistorii: TEkranHistorii;
+
+implementation
+
+uses GlownyEkran;
+
+{$R *.dfm}
+
+procedure TEkranHistorii.FormCreate(Sender: TObject);
+begin
+  EkranHistorii.Visible:=True;
+  EkranGlowny.Enabled:=False;
+end;
+
+
+procedure TEkranHistorii.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  EkranGlowny.Enabled:=True;
+  EkranHistorii.Free;
+end;
+
+end.

@@ -1,0 +1,37 @@
+object EkranFunkcji: TEkranFunkcji
+  Left = 527
+  Top = 238
+  Width = 350
+  Height = 379
+  Caption = 'Funkcje Edytora i Historii'
+  Color = clBtnFace
+  Constraints.MaxHeight = 379
+  Constraints.MaxWidth = 350
+  Constraints.MinHeight = 379
+  Constraints.MinWidth = 350
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object OpisFunkcji: TMemo
+    Left = 24
+    Top = 24
+    Width = 289
+    Height = 281
+    Enabled = False
+    Lines.Strings = (
+      'Opis Funkcji'
+      'Opis Funkcji'
+      'Opis Funkcji'
+      ''
+      'Przegladac mozna historie tylko zatwierdzonych ruchow '
+      '(przez nacisniecie'
+      'Zakoncz Kolejke) ->Zapisywania dot.ta sama zasada')
+    TabOrder = 0
+  end
+end
